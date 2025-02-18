@@ -6,10 +6,8 @@
 int main(void){
 	char ch;
 
-        for (ch = 'a'; ch <= 'z'; ch++){
-                putchar(ch);
-
-        }
-	
+        for (ch = 'a'; ch <= 'z'; ch++)
+   		putchar(ch);
+	putchar("\n"); /* Ensure newline at the end */	
 	return(0);
 }
