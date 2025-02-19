@@ -6,6 +6,10 @@
  */
 int _islower(int c)
 {
-	return (c >= 'a' && c <= 'z'); /**this is to please Betty*/
+ /** _islower - checks if a character is lowercase
+ * @c: the character to check
+ *
+ * Return: 1 if c is lowercase, 0 otherwise*/
+	return (c >= 'a' && c <= 'z');
 }
 
