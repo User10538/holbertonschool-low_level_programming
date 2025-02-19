@@ -12,5 +12,6 @@ int print_last_digit(int n)
 		find_last_digit = -find_last_digit;
 
 	_putchar(find_last_digit + '0');
+
 	return (find_last_digit);
 }
