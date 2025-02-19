@@ -3,7 +3,7 @@
  * print_alphabet_x10 - Prints the alphabet in lowercase 10 times.
  *
  * Description: This function prints the alphabet in lowercase, from 'a' to 'z',
- *              a total of 10 times, each time followed by a new line.
+ *              a total of 10 times, each time followed by a new line
  *
  * Return: Nothing (void).
  */
