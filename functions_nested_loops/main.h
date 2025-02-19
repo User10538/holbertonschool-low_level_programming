@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+int _abs(int);/***this is task 6*/
 int print_sign(int n);/**this is for task 5*/
 int _isalpha(int c);/**this is for task 4*/
 int _islower(int c);/**this is for task 3*/
