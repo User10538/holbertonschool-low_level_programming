@@ -3,6 +3,7 @@
  * main - entry point
  *return - always 0 success
  * print_alphabet - Prints the alphabet in lowercase followed by a new line.
+ * Return: Nothing (void).
  */
 
 void print_alphabet_x10(void)
@@ -17,5 +18,5 @@ void print_alphabet_x10(void)
 			_putchar(ch);
 		}
 		_putchar('\n');
-	}    	
+	}
 }
