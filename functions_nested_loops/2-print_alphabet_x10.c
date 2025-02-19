@@ -1,10 +1,9 @@
 #include "main.h"
 /**
- * main - entry point
- *
- * Description: function that prints 10 times the alphabet, in lowercase, followed by a new line.
- *
- * * Return: Nothing (void).
+ * Description: function that prints 10 times the alphabet, 
+ * in lowercase,
+ * followed by a new line.
+ * Return: Nothing (void).
  */
 
 void print_alphabet_x10(void)
