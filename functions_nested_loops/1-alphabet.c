@@ -3,7 +3,7 @@
 /**
  * main - entry point
  * return - always 0 success
- * print_alphabet - Prints the alphabet in lowercase followed by a new line.
+ * print_alphabet prints the alphabet in lowercase followed by a new line.
  */
 
 
