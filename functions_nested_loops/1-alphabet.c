@@ -1,9 +1,12 @@
 #include "main.h"
+
 /**
- * main - check the code
- *
- * print_alphabet - prints the alphabet, in lowercase,
+ * print_alphabet - Prints the alphabet in lowercase,
  * followed by a new line.
+ *
+ * Description: This function loops through the lowercase
+ * alphabet and prints each letter using _putchar. A new
+ * line is printed at the end.
  *
  */
 
