@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+void print_times_table(int n);/**this is task 12*/
 void print_to_98(int n);/**this is task 11*/
 int add(int, int);/**this is task 10*/
 void times_table(void);/**this is task 9*/
