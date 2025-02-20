@@ -1,14 +1,11 @@
 #include "main.h"
-
 /**
- * main - entry point
- * return - always 0 success
- *Decription: print_alphate prints alphabet in
- *lowercase followed by a new line
- *and only use _putchar twice in the code
+ * main - check the code
+ *
+ * print_alphabet - prints the alphabet, in lowercase,
+ * followed by a new line.
+ *
  */
-
-
 
 void print_alphabet(void)
 {
