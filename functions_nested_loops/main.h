@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+int add(int, int);/**this is task 10*/
 void times_table(void);/**this is task 9*/
 void jack_bauer(void);/**this is task 8*/
 int print_last_digit(int);/**this is task 7*/
