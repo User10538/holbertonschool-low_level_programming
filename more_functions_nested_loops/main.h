@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+void print_numbers(void);/**this is for task 3*/
 int mul(int a, int b);/**this is for task 2*/
 int _isdigit(int c);/**this is for task 1*/
 int _isupper(int c);/**this is for task 0*/
