@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-
+int mul(int a, int b);/**this is for task 2*/
 int _isdigit(int c);/**this is for task 1*/
 int _isupper(int c);/**this is for task 0*/
 int _putchar(char c); /**this is for _putchar*/
