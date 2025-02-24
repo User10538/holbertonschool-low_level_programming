@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+void print_triangle(int size);/**thi is for task 10*/
 void print_square(int size);/**this is for task 8*/
 void print_diagonal(int n);/**this is for task 7*/
 void print_line(int n);/**this is for task 6*/
