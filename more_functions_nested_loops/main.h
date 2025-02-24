@@ -1,7 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-
+void print_diagonal(int n);/**thi is for task 7*/
 void print_line(int n);/**this is for task 6*/
 void more_numbers(void);/**this is for task 5*/
 void print_most_numbers(void);/**this is for task 4*/
