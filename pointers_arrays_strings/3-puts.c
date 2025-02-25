@@ -9,15 +9,15 @@
 
 void _puts(char *str)
 {
-	if(str != NULL)
+	if (str != NULL)
 	{
 		while (*str != '\0')
 		{
 			_putchar(*str);
 			str++;
 		}
-		
+
 		_putchar('\n');
 	}
- 
+
 }
