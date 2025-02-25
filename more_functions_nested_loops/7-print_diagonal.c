@@ -12,15 +12,15 @@ void print_diagonal(int n)
         return;
     }
 
-    for (int i = 0; i < n; i++)  // Loop for each line
+    for (int i = 0; i < n; i++)
     {
-        for (int j = 0; j < i; j++)  // Print correct number of spaces
-        {
+        for (int j = 0; j < i; j++)
+	{
             _putchar(' ');
         }
 
-        _putchar('\\');  // Print the diagonal character
-        _putchar('\n');  // Newline after each '\'
+        _putchar('\\');
+        _putchar('\n');  
     }
 }
 
