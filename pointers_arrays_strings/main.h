@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+void rev_string(char *s);/**this is for Task 5*/
 void print_rev(char *s);/**this is for Task 4*/
 void _puts(char *str);/**this is for Task 3*/
 int _strlen(char *s);/**this is for Task2*/
