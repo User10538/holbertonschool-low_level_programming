@@ -1,34 +1,26 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * print_diagonal - Draws a diagonal line on the terminal
  * @n: Number of times the character '\' should be printed
- *
- * Description: If n is 0 or less, it only prints a newline.
  */
-
 void print_diagonal(int n)
 {
-	int i = 0, j = 0;
+    if (n <= 0)
+    {
+        _putchar('\n');
+        return;
+    }
 
-	if (n <= 0)
-	{
-		_putchar('\n');
-		return;
-	}
+    for (int i = 0; i < n; i++)  // Loop for each line
+    {
+        for (int j = 0; j < i; j++)  // Print correct number of spaces
+        {
+            _putchar(' ');
+        }
 
-	while (n > i)
-	{
-
-		while (j < i)
-		{
-			_putchar(' ');
-			j++;
-		}
-
-		_putchar('\\');
-		_putchar('\n');
-		i++;
-	}
+        _putchar('\\');  // Print the diagonal character
+        _putchar('\n');  // Newline after each '\'
+    }
 }
+
