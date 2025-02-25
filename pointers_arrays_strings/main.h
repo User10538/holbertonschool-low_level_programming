@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+void _puts(char *str);/**this is for Task 3*/
 int _strlen(char *s);/**this is for Task2*/
 void swap_int(int *a, int *b);/**this is for task 1*/
 void reset_to_98(int *n);/**thi is for task 0*/
