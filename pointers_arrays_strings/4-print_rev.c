@@ -1,18 +1,25 @@
 #include "main.h"
 #include <stddef.h>
 
+#include "main.h"
+#include <stddef.h>
+
 void print_rev(char *s)
 {
-	if (s != NULL)
-	{
-		while (s != NULL && *s != '\0')
-		{
+    if (s != NULL)
+    {
+        while (*s != '\0')
+        {
+            s++;
+        }
 
-			_putchar(*s);
-		}
+        while (s != NULL && *s != '\0')
+        {
+            s--;
+            _putchar(*s);
+        }
 
-
-
-		_putchar('\n');
-	}
+        _putchar('\n');
+    }
 }
+
