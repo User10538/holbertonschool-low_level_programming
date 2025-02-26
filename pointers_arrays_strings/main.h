@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+void print_array(int *a, int n);/**task 8*/
 void puts_half(char *str);/**task 7*/
 void puts2(char *str);/**task 6*/
 void rev_string(char *s);/**this is for Task 5*/
