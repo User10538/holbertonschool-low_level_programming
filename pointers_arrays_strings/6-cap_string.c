@@ -1,6 +1,13 @@
 #include "main.h"
 #include <stdio.h>
 
+/**
+ * cap_string - capitalizes all words of a string
+ * @s: space, tabulation, new line, ,, ;, ., !, ?,
+ *
+ * Return: s
+ */
+
 char *cap_string(char *s)
 {
 	int i = 0, j = 0, capitalise = 1;
@@ -8,19 +15,22 @@ char *cap_string(char *s)
 
 	while (s[i] != '\0')
 	{
-		if(s[i] >= 'a' && s[i] <= 'z' && capitalise)
+		if (s[i] >= 'a' && s[i] <= 'z' && capitalise)
 		{
-		
-			s[i]-= 32;
+			s[i] -= 32;
 		}
 
 		capitalise = 0;
 
-		if (s[i] == separators[j])
+		for (j = 0; separactors[j] != '\0'; j++)
 		{
-			capitalise = 1;
-
+			if (s[i] == separators[j])
+			{
+				capitalise = 1;
+			}
 		}
+
+		i++;
 	}
 
 	return (s);
