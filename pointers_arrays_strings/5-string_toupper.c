@@ -1,6 +1,12 @@
 #include "main.h"
 #include <stdio.h>
 
+/**
+ * string_toupper- change all lowercase to uppercase
+ * @s: the char of the letters
+ *
+ * Return: the value is s.
+ */
 char *string_toupper(char *s)
 {
 	int i = 0;
@@ -15,6 +21,6 @@ char *string_toupper(char *s)
 		i++;
 	}
 
-	return s;
+	return (s);
 
 }
