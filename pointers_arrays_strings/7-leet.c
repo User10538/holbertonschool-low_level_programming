@@ -12,8 +12,9 @@ char *leet(char *s)
 	char letters[] = "aAeEoOtTlL";
 	char numbers[] = "4433007711";
 
-	while (s[i] != '\0')  /* First loop to traverse the input string */
+	while (s[i] != '\0')  /* First loop to traverse the input string */	
 	{
+		j = 0;
 		while (letters[j] != '\0' && s[i] != letters[j])
 			/* Second loop check replacements */
 			j++;
