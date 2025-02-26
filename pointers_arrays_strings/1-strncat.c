@@ -2,13 +2,11 @@
 #include <stdio.h>
 #include <string.h>
 /**
- *_strncat - Concatenates two strings using at most `n` bytes from `src`
-
- * @dest -destination string which src will be apprended
- * @src - source to append to 'dest'
- * @n - max number from src
- *
- * return - pointer to string dest
+ * _strncat - Concatenates two strings using at most `n` bytes from `src`
+ * @dest: The destination string to which `src` will be appended
+ * @src: source to append to 'dest'
+ * @n: max number from src
+ * Return: pointer to string dest
  */
 
 char *_strncat(char *dest, char *src, int n)
@@ -21,8 +19,7 @@ char *_strncat(char *dest, char *src, int n)
 	while (dest[i] != '\0')
 	{
 		i++;
-
-	}	
+	}
 
 	while (src[j] != '\0' && j < n)
 	{
