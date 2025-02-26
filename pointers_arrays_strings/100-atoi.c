@@ -12,7 +12,7 @@ int _atoi(char *s)
 
 	if (*s == '-')
 	{
-		printf("%c" , *s);
+		/**printf("%c", *s);*/
 		signs = -1;
 		s++;
 	}
@@ -22,7 +22,7 @@ int _atoi(char *s)
 		s++;
 	}
 
-	while (*s >= 0 && *s <= 9)
+	while (*s >= '0' && *s <= '9')
 	{
 		new_int = new_int * 10 + (*s - '0');
 		s++;
