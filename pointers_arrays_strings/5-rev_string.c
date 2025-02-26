@@ -1,24 +1,31 @@
- #include "main.h"
+#include "main.h"
 
 /**
- * print_rev - Prints a string in reverse, followed by a new line.
- * @s: The string to be printed in reverse.
+ * rev_string - Reverses a string in place.
+ * @s: The string to be reversed.
  */
-void print_rev(char *s)
+void rev_string(char *s)
 {
-    char *tothe_end = s;
+	char *end = s;
+	char temp;
 
-    while (*tothe_end != '\0')
-        tothe_end++;
+	/** Move 'end' to the last character before '\0'*/
 
-    tothe_end--;
+	while (*end != '\0')
+		end++;
 
-    while (tothe_end >= s)
-    {
-        _putchar(*tothe_end);
-        tothe_end--;
-    }
+	end--; /** Move back to the last actual character*/
 
-    _putchar('\n');
+	/** Swap characters from start to end*/
+
+	while (s < end)
+	{
+		temp = *s;
+		*s = *end;
+		*end = temp;
+
+		s++;
+		end--;
+	}
 }
 
