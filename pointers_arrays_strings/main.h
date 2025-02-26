@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+char *_strncat(char *dest, char *src, int n);/**task 1*/
 char *_strcat(char *dest, char *src);/**this is the last project task 0*/
 int _atoi(char *s);/**task 10*/
 char *_strcpy(char *dest, char *src);/**task 9*/
