@@ -22,7 +22,7 @@ char *cap_string(char *s)
 
 		capitalise = 0;
 
-		for (j = 0; separactors[j] != '\0'; j++)
+		for (j = 0; separators[j] != '\0'; j++)
 		{
 			if (s[i] == separators[j])
 			{
