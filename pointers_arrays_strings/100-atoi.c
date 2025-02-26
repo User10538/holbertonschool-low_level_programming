@@ -10,16 +10,14 @@ int _atoi(char *s)
 {
 	int signs = 1, new_int = 0;
 
-	if (*s == '-')
+	while (*s && ( *s == ' ' || *s == '+' || *s == '-'))
 	{
-		/**printf("%c", *s);*/
-		signs = -1;
-		s++;
-	}
-
-	else if (*s == '+')
-	{
-		s++;
+		if (*s == '-')
+		{
+			/**printf("%c", *s);*/
+			signs = -signs ;
+			s++;
+		}
 	}
 
 	while (*s >= '0' && *s <= '9')
