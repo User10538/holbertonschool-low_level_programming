@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+char *string_toupper(char *);/**task 5*/
 void reverse_array(int *a, int n);/**task 4*/
 int _strcmp(char *s1, char *s2);/**task 3*/
 char *_strncpy(char *dest, char *src, int n);/**task 2*/
