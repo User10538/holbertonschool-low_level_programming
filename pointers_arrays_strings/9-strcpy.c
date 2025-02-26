@@ -5,7 +5,7 @@
  * _strcpy - copies the string pointed to by src, including '\0', to dest
  * @src: source string
  * @dest: destination buffer
- * 
+ *
  * Return: pointer to dest
  */
 
