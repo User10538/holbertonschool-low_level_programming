@@ -1,14 +1,20 @@
 #include "main.h"
 #include <stdio.h>
+/**
+ * _strcmp - Compare two strings
+ * @s1: first string
+ * @s2: second string
+ *
+ * Return: the two strings
+ */
 
 int _strcmp(char *s1, char *s2)
 {
-	int i = 0;
-
-	while (s2[i] == s1[i])
+	while (*s2 && (*s2 == *s1))
 	{
-		i++;
+		s1++;
+		s2++;
 	}
 
-	return (s2[i]);
+	return (*s1 - *s2);
 }
