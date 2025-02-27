@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+char *rot13(char *);/**task 8*/
 char *leet(char *);/**task 7*/
 char *cap_string(char *);/**task 6*/
 char *string_toupper(char *);/**task 5*/
