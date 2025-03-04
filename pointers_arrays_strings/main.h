@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+unsigned int _strspn(char *s, char *accept); /** task 3*/
 char *_strchr(char *s, char c);/**task 2*/
 char *_memcpy(char *dest, char *src, unsigned int n);/**Task 1*/
 char *_memset(char *s, char b, unsigned int n);/** Week 5 Task 0*/
