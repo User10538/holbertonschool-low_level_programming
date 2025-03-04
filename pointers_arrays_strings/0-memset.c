@@ -1,14 +1,13 @@
 #include "main.h"
 #include <stdio.h>
+
 /**
- * Description - fills memory with a constant byte.
- *
  * _memset - fills memory with a constant byte
+ * @s: pointer to the memory area
+ * @b: byte to fill the memory with
+ * @n: number of bytes to fill
  *
- * @s:array
- * @n: is an int
- * @b: is a char
- * Return: pointer to memory area s
+ * Return: pointer to the memory area s
  */
 
 
