@@ -1,8 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-char *_memcpy(char *dest, char *src, unsigned int n);/**Task 2*/
-char *_memset(char *s, char b, unsigned int n);/** Week 5 Task 1*/
+char *_strchr(char *s, char c);/**task 2*/
+char *_memcpy(char *dest, char *src, unsigned int n);/**Task 1*/
+char *_memset(char *s, char b, unsigned int n);/** Week 5 Task 0*/
 char *rot13(char *);/**task 8*/
 char *leet(char *);/**task 7*/
 char *cap_string(char *);/**task 6*/
