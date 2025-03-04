@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN
 
+char *_strstr(char *haystack, char *needle);/**task 5*/
 char *_strpbrk(char *s, char *accept);/** task 4*/
 unsigned int _strspn(char *s, char *accept); /** task 3*/
 char *_strchr(char *s, char c);/**task 2*/
