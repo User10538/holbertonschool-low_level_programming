@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+char *_memcpy(char *dest, char *src, unsigned int n);/**Task 2*/
 char *_memset(char *s, char b, unsigned int n);/** Week 5 Task 1*/
 char *rot13(char *);/**task 8*/
 char *leet(char *);/**task 7*/
