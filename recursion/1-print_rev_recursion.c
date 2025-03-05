@@ -5,7 +5,7 @@
  * _puts_recursion - Prints a string followed by a new line using recursion.
  * @s: The string to print.
  */
-void _puts_recursion(char *s)
+void _print_rev_recursion(char *s)
 {
     if (*s == '\0')
     {
