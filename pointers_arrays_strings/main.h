@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN
 
+void print_diagsums(int *a, int size);/**task 7*/
 void print_chessboard(char (*a)[8]);/**task 6*/
 char *_strstr(char *haystack, char *needle);/**task 5*/
 char *_strpbrk(char *s, char *accept);/** task 4*/
