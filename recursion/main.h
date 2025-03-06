@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN
 
+int _sqrt_recursion(int n);/**task 5*/
 int _pow_recursion(int x, int y);/** task 4*/
 int factorial(int n);/**task 3*/
 int _strlen_recursion(char *s);/**task 2*/
