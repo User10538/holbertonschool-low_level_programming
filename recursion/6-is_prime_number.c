@@ -16,7 +16,7 @@ int is_prime_helper(int n, int i)
 	return (1);
 	if (n % i == 0) /* If divisible, it's not prime */
 	return (0);
-	
+
 	return (is_prime_helper(n, i + 1)); /* Check next number */
 }
 
@@ -31,6 +31,6 @@ int is_prime_number(int n)
 {
 	if (n <= 1)
 	return (0);
-	
+
 	return (is_prime_helper(n, 2)); /* Start checking from 2 */
 }
