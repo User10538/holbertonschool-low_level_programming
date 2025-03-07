@@ -11,6 +11,13 @@
 int main(int argc, char *argv[])
 {
         int num1, num2, multiple;
+		
+	/* Check if exactly two arguments are provided */
+	if (argc != 3)
+	{
+		printf("Error\n");
+		return (1);
+	}
 	
 	/* Convert arguments to integers */
 	num1 = atoi(argv[1]);
@@ -21,13 +28,4 @@ int main(int argc, char *argv[])
 
 	return (0);
 	
-	/* Check if exactly two arguments are provided */
-	
-	if (argc != 3)
-	{
-		printf("Error\n");
-		return (1);
-	}
-
-        return (0);
 }
