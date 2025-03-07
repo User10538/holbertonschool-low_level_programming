@@ -10,9 +10,9 @@
  */
 int main(int argc, char *argv[])
 {
-	int num, sum = 0;
+	int num, sum = 0, i;
 
-	for (int i = 1; i < argc; i++)
+	for (i = 1; i < argc; i++)
 	{
 		num = atoi(argv[i]);
 
