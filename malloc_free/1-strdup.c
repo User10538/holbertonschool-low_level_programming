@@ -4,9 +4,8 @@
 
 /**
  * _strdup -  returns a pointer to a newly allocated space in memory,
- * which contains a copy of the string given as a parameter.
- * @c: char
- * @size: the size of the memory to print
+ *
+ * @str: string
  *
  * Return: NULL or pointer to the duplicated string
  */
@@ -15,18 +14,21 @@ char *_strdup(char *str)
 {
 
 	char *arr;
-	unsigned int i;
+	unsigned int i, size = 0;
 
-	if (str == NULL || size == 0)
-	return(NULL);
-
-	arr = malloc(size);
-
-	if (arr == NULL)
+	if (str == NULL)
 	return (NULL);
 
-	for (i = 0; size > i; i++)
-	arr[i] = c;
+	while (str[size])  /* Get the length of the string */
+		size++;
+
+	arr = malloc(size + 1); /* Allocate memory for string + '\0' */
+
+	if (arr == NULL)
+		return (NULL);
+
+	for (i = 0; i <= size; i++) /* Copy the string including '\0' */
+		arr[i] = str[i];
 
 	return (arr);
 }
