@@ -3,20 +3,23 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * alloc_grid - returns a pointer to a 2 dimensional array of integers
+ * malloc_checked - Returns a pointer to the allocated memory
  *
- * @width: first string
- * @height: second string
+ * @b: integer
  *
- * Return: NULL or on failure or contains the contents of s1 and s2.
+ * Return: status 98
  */
-
 
 void *malloc_checked(unsigned int b)
 {
+	/**generic pointer type and  allocate b bytes of memory from the heap */
+	void *ptr = malloc(b);
 
-	char * arr;
-	int size = 0;
+	if (ptr == NULL)
 
-	arr = malloc(size + 1);
+	/**  exits the process with status 98 using exit(98)*/
+	exit(98);
+
+	return (ptr);
+
 }
