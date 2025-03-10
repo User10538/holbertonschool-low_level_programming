@@ -19,12 +19,12 @@ int **alloc_grid(int width, int height)
 
 
 	/* Return NULL if width or height is invalid */
-	if ( width <= 0 || height <= 0)
+	if (width <= 0 || height <= 0)
 	return (NULL);
 
 	/* Allocate memory for row pointers */
 	grid = malloc(height * sizeof(int *));
-	
+
 	if (grid == NULL)
 	return (NULL);
 
@@ -38,7 +38,6 @@ int **alloc_grid(int width, int height)
 		{
 			/* Free any previously allocated rows */
 			for (j = 0; j < i; j++)
-				
 				free(grid[j]);
 			free(grid);
 			return (NULL);
@@ -52,8 +51,4 @@ int **alloc_grid(int width, int height)
 	}
 
 	return (grid);
-	
-
-
-
 }
