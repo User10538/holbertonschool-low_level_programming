@@ -1,6 +1,7 @@
 #ifndef MAIN_H
 #define MAIN
 
+int **alloc_grid(int width, int height);/** task 3*/
 char *str_concat(char *s1, char *s2);/**task 2*/
 char *_strdup(char *str);/**task 1*/
 char *create_array(unsigned int size, char c);/**task 0*/
