@@ -1,35 +1,30 @@
 #include "main.h"
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-/**
- * _calloc - allocates memory for an array of nmemb
- *
- * @nmemb: unsigned integer
- * @size: unsigned integer
- *
- *
- * Return: NULL or a pointer to the allocated memory.
- */
 
+/**
+ * _calloc - allocates memory for an array, setting it to zero.
+ * @nmemb: number of elements in the array.
+ * @size: size of each element.
+ *
+ * Return: pointer to the allocated memory or NULL on failure.
+ */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-
 	char *arr;
+	unsigned int total_size, i;
 
+	/** Check if either nmemb or size is 0*/
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-
-	/* Allocate memory for nmemb elements, each of size bytes */
-	arr = malloc(size * nmemb);
+	total_size = nmemb * size;
+	/** Allocate memory*/
+	arr = malloc(total_size);
 
 	if (arr == NULL)
 		return (NULL);
-
-	/* Initialize allocated memory to zero */
-	/** calloc allocates memory and also initializes it to zero*/
-	memset(arr, 0, nmemb * size);
 
 	/** Manually set the allocated memory to 0 (without memset)*/
 	for (i = 0; i < total_size; i++)
@@ -38,6 +33,4 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	}
 
 	return (arr);
-
-
 }
