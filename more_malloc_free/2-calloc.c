@@ -31,6 +31,12 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	/** calloc allocates memory and also initializes it to zero*/
 	memset(arr, 0, nmemb * size);
 
+	/** Manually set the allocated memory to 0 (without memset)*/
+	for (i = 0; i < total_size; i++)
+	{
+		arr[i] = 0;
+	}
+
 	return (arr);
 
 
