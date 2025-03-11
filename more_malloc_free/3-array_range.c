@@ -15,13 +15,10 @@
 int *array_range(int min, int max)
 {
 
-	char *arr;
+	int *arr;
 	unsigned int i, total_array;
 
-	/** Check if either min or max is 0*/
-	if (min == 0 || max == 0)
-		return (NULL);
-
+	/* Check if min > max */
 	if (min > max)
 		return (NULL);
 
@@ -37,7 +34,7 @@ int *array_range(int min, int max)
 	/** Initialize the array with integers from min to max*/
 	for (i = 0; i < total_array; i++)
 	{
-		arr[i] = min + 1;
+		arr[i] = min + i;
 	}
 
 	return (arr);
