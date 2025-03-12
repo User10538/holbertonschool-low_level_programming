@@ -29,11 +29,18 @@ typedef struct dog dog_t;
  */
 void init_dog(struct dog *d, char *name, float age, char *owner);
 
+/**
+ * print_dog - to print struct dog
+ *
+ * @d: struct dog
+ * Return - NULL
+ */
+
 void print_dog(struct dog *d); /**task 2*/
 
 /**
  * new_dog - creates a new dog
- * 
+ *
  * @name: Name of the dog
  * @age: Age of the dog
  * @owner: Owner of the dog
