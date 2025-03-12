@@ -1,6 +1,7 @@
 #include "dog.h"
 #include <stddef.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * init_dog - initialize a variable of type struct dog.
@@ -23,8 +24,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return NULL;
 
 	/** Allocate memory for the name and owner strings to store*/
-	dog->name = malloc(strdup(name) + 1);
-	dog->owner = malloc(strdup(owner) + 1);
+	dog->name = strdup(name);
+	dog->owner = strdup(owner);
        
 	/**Assign the age*/
 	dog->age = age;
