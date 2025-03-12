@@ -13,12 +13,6 @@ void print_dog(struct dog *d)
 
 	char s[] = "(nil)";
 
-	if (d->name == NULL)
-	{
-		printf("%s\n", s);
-		return;
-	}
-
 	if (d == NULL)
 		return;
 
