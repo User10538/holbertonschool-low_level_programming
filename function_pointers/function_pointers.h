@@ -1,6 +1,16 @@
 #ifndef FUNCTION_POINTERS_H
 #define FUNCTION_POINTERS_H
 
+/**
+ * array_iterator - executes a function given as a parameter
+ * on each element of an array
+ * @array: name of array.
+ * @size: size of the size_t
+ * @action: function pointer.
+ * Return: Nothing.
+ */
+void array_iterator(int *array, size_t size, void (*action)(int));
+
 
 /**
  * print_name - function that prints a name
