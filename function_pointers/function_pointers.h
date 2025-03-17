@@ -12,7 +12,8 @@ void print_name(char *name, void (*f)(char *)); /** task 0*/
 
 /**
  * _putchar - to print
- * c: the character
+ * @c: get the character
+ * Return: nothing.
  */
 int _putchar(char c); /**this is for putchar*/
 
