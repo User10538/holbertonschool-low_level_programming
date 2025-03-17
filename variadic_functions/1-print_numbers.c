@@ -4,9 +4,10 @@
 #include "variadic_functions.h"
 
 /**
- * sum_them_all - function that returns the sum of all its parameters
+ * print_numbers - function that prints number
  *
  * @n: unsigned int
+ * @separator: character
  *
  * Return: returns 0
  */
@@ -19,15 +20,16 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_start(ap, n);
 
-	for (i= 0; i < n ; i++)
+	for (i = 0; i < n; i++)
 	{
-		printf("%d" , va_arg(ap, int));/* Print the next number */
-				if (separator != NULL && i < n - 1) /* Print separator except after last number */
-            printf("%s", separator);
-	
-	}	
+		printf("%d", va_arg(ap, int));/* Print the next number */
+		/* Print separator except after last number */
+		if (separator != NULL && i < n - 1)
+			printf("%s", separator);
+
+	}
 
 	printf("\n"); /* Print a newline at the end */
-	va_end(ap);	
+	va_end(ap);
 
 }
