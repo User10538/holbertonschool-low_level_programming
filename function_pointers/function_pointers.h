@@ -3,6 +3,16 @@
 #define FUNCTION_POINTERS_H
 
 /**
+ * int_index - function that searches for an integer
+ * on each element of an array
+ * @array: name of array.
+ * @size: number of elements in the array
+ * @cmp: pointer to the function you need to use
+ * Return: -1
+ */
+int int_index(int *array, int size, int (*cmp)(int));
+
+/**
  * array_iterator - executes a function given as a parameter
  * on each element of an array
  * @array: name of array.
