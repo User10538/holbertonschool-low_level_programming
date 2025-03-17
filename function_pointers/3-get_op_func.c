@@ -8,9 +8,10 @@
  *
  * @s: character
  *
- * Returns: returns a pointer to the function that corresponds to the operator given as a parameter.
+ * Return: returns a pointer to the function that
+ * corresponds to the operator given as a parameter
  *
- */ 
+ */
 int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
@@ -28,8 +29,9 @@ int (*get_op_func(char *s))(int, int)
 		/* Ensures s is a single char */
 		if (*(ops[i].op) == *s && s[1] == '\0')
 			return (ops[i].f);
+
 		i++;
-		
+
 	}
 
 	return (NULL);
