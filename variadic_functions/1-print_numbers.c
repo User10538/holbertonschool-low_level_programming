@@ -21,7 +21,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	for (i= 0; i < n ; i++)
 	{
-		printf("%d\n" ,va_arg(ap, int));/* Print the next number */
+		printf("%d" , va_arg(ap, int));/* Print the next number */
 				if (separator != NULL && i < n - 1) /* Print separator except after last number */
             printf("%s", separator);
 	
