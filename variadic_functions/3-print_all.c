@@ -21,6 +21,8 @@ void print_all(const char * const format, ...)
 	/* Loop through the format string */
 	while (format && format[i])
 	{
+		if (format[i] == 'c' || format[i] == 'i' || format[i] == 'f' || format[i] == 's')
+		{
 		if (format[i] == 'c')
 		{
 			printf("%d", va_arg(ap, int));
@@ -44,6 +46,7 @@ void print_all(const char * const format, ...)
 				str = "(nil)";
 			printf("%s", str);
                 }
+		}
 
 		i++;
 	}
