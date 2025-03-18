@@ -41,6 +41,13 @@ void print_numbers(const char *separator, const unsigned int n, ...);
  */
 void print_strings(const char *separator, const unsigned int n, ...);
 
+/**
+ * print_all - function that prints anything
+ * @char: character
+ * @format: list of types of arguments 
+ */
+void print_all(const char * const format, ...);
+
 #endif /* VARIADIC_FUNCATIONS_H */
 
 
