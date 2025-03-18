@@ -19,31 +19,30 @@ void print_all(const char * const format, ...)
 	va_start(ap, format);
 
 	/* Loop through the format string */
-	while (format[i])
+	while (format && format[i])
 	{
 		if (format[i] == 'c')
 		{
 			printf("%d", va_arg(ap, int));
 		}
 
-		else if(format[i] == 'i')
+		if(format[i] == 'i')
                 {
 			printf("%d", va_arg(ap, int));	
 		}
 		
-		else if (format[i] == 'f')
+		if (format[i] == 'f')
                 {
 			printf("%f", va_arg(ap, double));
                 }
 		
-		else if (format[i] == 's')
+		if (format[i] == 's')
                 {
 			str = va_arg(ap, char *);                        
 
 			if (str == NULL)
 				str = "(nil)";
-			else 
-				printf("%s", str);
+			printf("%s", str);
                 }
 
 		i++;
@@ -52,8 +51,4 @@ void print_all(const char * const format, ...)
 	printf("\n"); /* Print a newline at the end */
         va_end(ap);
 
-
-
-
-	
 }
