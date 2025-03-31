@@ -4,6 +4,17 @@
 #include <string.h>
 #include <stdio.h>
 
+typedef struct list_s
+{
+	/*string pointer*/
+	char *str;
+	
+	unsigned int len;
+	struct list_s *next;  /* Pointer to the next node*/
+
+} list_t;
+
+
 /**
  * print_list - function that prints all the elements of a list_t list.
  * @h: const lsit_t.
