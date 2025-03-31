@@ -8,7 +8,7 @@ typedef struct list_s
 {
 	/*string pointer*/
 	char *str;
-	
+
 	unsigned int len;
 	struct list_s *next;  /* Pointer to the next node*/
 
