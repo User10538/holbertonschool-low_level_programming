@@ -4,6 +4,13 @@
 #include <string.h>
 #include <stdio.h>
 
+/**
+ *  struct list_s - to create structure list
+ *  @str: character
+ *  @len: length of the int
+ *  @next: next node.
+ *
+ */
 typedef struct list_s
 {
 	/*string pointer*/
