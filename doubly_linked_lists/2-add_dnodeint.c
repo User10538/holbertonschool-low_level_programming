@@ -21,10 +21,13 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 	
         new_nodes->n = n;
         new_nodes->next = *head;
-	
+	/* If the list is not empty, set previous pointer of  old head*/
+	if (*head != NULL)
+	{
+		(*head)->prev = new_nodes;
+	}
 
-
-
+	new_nodes->prev = NULL;
 
         *head = new_nodes;
 
