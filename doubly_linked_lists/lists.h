@@ -22,6 +22,14 @@ typedef struct dlistint_s
 } dlistint_t;
 
 /**
+ * add_dlistint - function  that adds a new node at the beginning of a dlistint_t list.
+ * @head: const dlistint_t.
+ * @n: int
+ * Return: number of nodes
+ */
+dlistint_t *add_dnodeint(dlistint_t **head, const int n);
+
+/**
  * dlistint_len - function that returns the number of elements in a linked dlistint_t list.
  * @h: const dlistint_t.
  * Return: number of nodes
