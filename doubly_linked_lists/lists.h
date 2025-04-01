@@ -22,6 +22,13 @@ typedef struct dlistint_s
 } dlistint_t;
 
 /**
+ * free_dlistint - function that frees a dlistint_t list.
+ * @head: const dlistint_t.
+ * Return: number of nodes
+ */
+void free_dlistint(dlistint_t *head);
+
+/**
  * add_dnodeint_end - function that adds a new node at the end of a dlistint_t list.
  * @head: const dlistint_t.
  * @n: int
