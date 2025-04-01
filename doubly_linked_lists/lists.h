@@ -22,6 +22,15 @@ typedef struct dlistint_s
 } dlistint_t;
 
 /**
+ * insert_dnodeint_at_index - function that inserts a new node at a given position.
+ * @h: const dlistint_t
+ * @idx: int
+ * @n: int
+ * Return: address of new nodes
+ */
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
+
+/**
  * sum_dlistint - function that returns the sum of all the data (n) of a dlistint_t linked list.
  * @head: const dlistint_t.
  * Return: sum of nodes
