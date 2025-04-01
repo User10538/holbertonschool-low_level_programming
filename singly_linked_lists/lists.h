@@ -22,6 +22,15 @@ typedef struct list_s
 } list_t;
 
 /**
+ * add_node -  function that adds a new node 
+ * at the beginning of a list_t list
+ * @head: const list_t.
+ * @str: char
+ * Return: number of nodes
+ */
+list_t *add_node(list_t **head, const char *str);
+
+/**
  * list_len - function that returns the number of elements in a linked list_t list
  * @h: const list_t.
  * Return: number of nodes
