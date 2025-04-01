@@ -22,7 +22,7 @@ typedef struct dlistint_s
 } dlistint_t;
 
 /**
- * add_dlistint - function  that adds a new node at the beginning of a dlistint_t list.
+ * add_dnodeint - function  that adds a new node at the beginning of a dlistint_t list.
  * @head: const dlistint_t.
  * @n: int
  * Return: number of nodes
