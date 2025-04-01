@@ -22,6 +22,14 @@ typedef struct list_s
 } list_t;
 
 /**
+ * add_node_end -  function that adds a new node at the end.
+ * @head: const list_t.
+ * @str: char
+ * Return: number of nodes
+ */
+list_t *add_node_end(list_t **head, const char *str);
+
+/**
  * add_node -  function that adds a new node 
  * at the beginning of a list_t list
  * @head: const list_t.
