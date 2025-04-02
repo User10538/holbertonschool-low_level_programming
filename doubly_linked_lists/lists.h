@@ -22,6 +22,15 @@ typedef struct dlistint_s
 } dlistint_t;
 
 /**
+ * delete_dnodeint_at_index - function that deletes the node
+ * at index index of a dlistint_t linked list.
+ * @head: const dlistint_t
+ * @index: int
+ * Return: 1 if it succeeded, -1 if it failed
+ */
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
+
+/**
  * insert_dnodeint_at_index - function that inserts a new node at a given position.
  * @h: const dlistint_t
  * @idx: int
