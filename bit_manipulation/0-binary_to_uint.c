@@ -11,6 +11,21 @@
 unsigned int binary_to_uint(const char *b)
 {
 
+	int intNumber = 0, i = 0, remainder;
+
+	if (b != '1' || b != '0' || b == NULL)
+		return (0);
+
+	while ( b != 0)
+	{
+		remainder = intNumber % 10;
+		b /= 10;
+		intNumber += remainder * pow(2, i);
+		++i;
+	}
+
+	return (intNumber);
+
 
 
 }
