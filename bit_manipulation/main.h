@@ -6,6 +6,14 @@
 #include <stdio.h>
 
 /**
+ * get_bit - return the value of bit
+ * @n: long int
+ * @index: unsigned int
+ * Return: vlaue of bit or -1 if error
+ */
+int get_bit(unsigned long int n, unsigned int index);
+
+/**
  * print_binary - function that prints the binary representation of a number.
  * @n: long int
  */
