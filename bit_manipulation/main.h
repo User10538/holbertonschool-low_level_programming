@@ -6,6 +6,13 @@
 #include <stdio.h>
 
 /**
+ * set_bit - function that sets the value of a bit to 1 at a given in
+ * @n: long int
+ * @index: unsigned int
+ */
+int set_bit(unsigned long int *n, unsigned int index);
+
+/**
  * get_bit - return the value of bit
  * @n: long int
  * @index: unsigned int
