@@ -6,7 +6,7 @@
 #include <stdio.h>
 
 /**
- * read_textfile - function that reads a text file and 
+ * read_textfile - function that reads a text file and
  * prints it to the POSIX standard output.
  * @filename: constr char
  * @letter: size_t
