@@ -6,10 +6,10 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	unsigned int range = sizeof(n) *8;
+	unsigned int range = sizeof(n) * 8;
 
 	/*check if index out of range*/
-	if (index >= range )
+	if (index >= range)
 		return (-1);
 
 	/*extract and return teh bit at the index*/
