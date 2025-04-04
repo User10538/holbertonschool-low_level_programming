@@ -6,6 +6,14 @@
 #include <stdio.h>
 
 /**
+ * append_text_to_file - function that appends text at the end of a file
+ * @filename: constr char
+ * @text_content: char
+ * Return: 1 on success and -1 on failure
+ */
+int append_text_to_file(const char *filename, char *text_content);
+
+/**
  * create_file - function that creates a file.
  * @filename: constr char
  * @text_content: char
