@@ -14,7 +14,6 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	if (index >= range)
 		return (-1);
 
-	/*set bit at index to 0 using bitwise OR*/
 	*n &= mask;
-	return (0);
+	return (1);
 }
