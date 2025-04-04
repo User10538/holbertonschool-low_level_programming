@@ -11,7 +11,7 @@ void print_binary(unsigned long int n)
 {
 	int bit_position, started = 0;
 
-	for (bit_position = sizeof (n) * 8 -1; bit_position >= 0; bit_position --)
+	for (bit_position = sizeof(n) * 8 - 1; bit_position >= 0; bit_position--)
 	{
 		if ((n >> bit_position) & 1)
 		{
@@ -27,7 +27,5 @@ void print_binary(unsigned long int n)
 
 	if (!started)
 		putchar('0');
-
-	
 }
 
