@@ -1,3 +1,7 @@
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "main.h"
 /**
  * get_bit - return the value of bit
  * @n: long int
