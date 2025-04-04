@@ -6,6 +6,12 @@
 #include <stdio.h>
 
 /**
+ * print_binary - function that prints the binary representation of a number.
+ * @n: long int
+ */
+void print_binary(unsigned long int n);
+
+/**
  * binary_to_uint - function that converts a binary number to an unsigned int.
  * @b: const character
  * Return:the converted number, or 0
