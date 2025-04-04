@@ -7,12 +7,12 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned long int xor_result = n^m;
+	unsigned long int xor_result = n ^ m;
 	unsigned int range = sizeof(n) * 8;
-	int count = 0;
+	unsigned int count = 0;
 																											  /*check if index out of range*/
-        if (m >= range)
-                return (-1);
+	if (m >= range)
+		return (-1);
 
 	/*use XOR to find the number to get the differing bits*/
 	while (xor_result)
@@ -24,10 +24,5 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 		xor_result >>= 1;
 	}
 
-	return (count);
-
-
-
-
-
+	return (count)
 }
