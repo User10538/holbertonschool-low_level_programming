@@ -9,7 +9,7 @@
 
 void error_exit(int code, const char *message, const char *arg)
 {
-    dprintf(STDERR_FILENO, message, arg);
+    dprintf(STDout_FILENO, message, arg);
     exit(code);
 }
 
