@@ -53,6 +53,13 @@ int copy_file_to_file(const char *file_from, const char *file_to)
                 error_exit(98, "Error: Can't write to NAME_OF_THE_FILE %s\n", file_from);
 
         }
+	
+	/* Handle EOF (bytes_read == 0) */
+	if (bytes_read == 0)
+	{
+		/* Successfully reached EOF, no need to handle further */
+       	}
+
 
         if (close(fd_from) == -1)
         error_exit(100, "Error: Can't close fd FD_VALUE %d\n", file_from);
