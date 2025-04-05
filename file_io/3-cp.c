@@ -23,10 +23,10 @@ int copy_file_to_file(const char *file_from, const char *file_to)
 	/*open the file_from*/
 	fd_from = open(file_from, O_RDONLY);
 	if (fd_from == -1)
-		error_exit (98, "Error: Can't write to NAME_OF_THE_FILE \n", file_from);
+		error_exit (98, "Error: Can't write to NAME_OF_THE_FILE %s\n", file_from);
 
 	/*can not create or if write to file_to fails*/
-	fd_to = open(file_from, O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	fd_to = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if(fd_to == -1)
 	{
 		close(fd_from);
@@ -41,7 +41,7 @@ int copy_file_to_file(const char *file_from, const char *file_to)
 		{
 			close(fd_from);
 			close(fd_to);
-			error_exit(99, "Error: Can't write to NAME_OF_THE_FILE \n", file_to);
+			error_exit(99, "Error: Can't write to NAME_OF_THE_FILE %s\n", file_to);
 		}
 	}
 
@@ -49,15 +49,15 @@ int copy_file_to_file(const char *file_from, const char *file_to)
 	{
 		close(fd_from);
 		close(fd_to);
-		error_exit(98, "Error: Can't write to NAME_OF_THE_FILE \n", file_from);
+		error_exit(98, "Error: Can't write to NAME_OF_THE_FILE %s\n", file_from);
 
 	}
 
 	if (close(fd_from) == -1)
-	error_exit(100, "Error: Can't close fd FD_VALUE \n", file_from);
+	error_exit(100, "Error: Can't close fd FD_VALUE %s\n", file_from);
 
 	if (close(fd_to) == -1)
-        error_exit(100, "Error: Can't close fd FD_VALUE \n", file_to);
+        error_exit(100, "Error: Can't close fd FD_VALUE %s\n", file_to);
 
 	return (1);
 }
