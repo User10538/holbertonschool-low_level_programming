@@ -46,15 +46,16 @@ int copy_file_to_file(const char *file_from, const char *file_to)
 
         /* Read and write loop */
         while ((bytes_read = read(fd_from, buffer, BUFFER_SIZE)) > 0)
-        {
-                bytes_written = write(fd_to, buffer, bytes_read);
-                if (bytes_written != bytes_read)
-                {
-                        close(fd_from);
-                        close(fd_to);
-                        error_exit(99, "Error: Can't write to %s\n", file_to);
-                }
-        }
+	{
+		bytes_written = write(fd_to, buffer, bytes_read);
+		
+		if (bytes_written != bytes_read)
+		{
+			close(fd_from);
+			close(fd_to);
+			error_exit(99, "Error: Can't write to %s\n", file_to);
+		}
+	}
 
         if (bytes_read == -1)
         {
