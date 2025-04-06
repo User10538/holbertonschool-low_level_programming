@@ -1,10 +1,10 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <fcntl.h>
 #include <stdarg.h>
-
-#define BUFFER_SIZE 1024
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include "main.h"
+#include <fcntl.h>
+#include <unistd.h>
 
 /**
  * error_exit - Prints an error message and exits with the given code
@@ -33,7 +33,7 @@ int copy_file_to_file(const char *file_from, const char *file_to)
 {
 	int fd_from, fd_to;
 	ssize_t bytes_read, bytes_written;
-	char buffer[BUFFER_SIZE];
+	char buffer[1024];
 
 	fd_from = open(file_from, O_RDONLY);
 	if (fd_from == -1)
@@ -46,7 +46,7 @@ int copy_file_to_file(const char *file_from, const char *file_to)
 		error_exit(99, "Error: Can't write to %s\n", file_to);
 	}
 
-	while ((bytes_read = read(fd_from, buffer, BUFFER_SIZE)) > 0)
+	while ((bytes_read = read(fd_from, buffer, 1024)) > 0)
 	{
 		bytes_written = write(fd_to, buffer, bytes_read);
 		if (bytes_written != bytes_read)
@@ -73,6 +73,7 @@ int copy_file_to_file(const char *file_from, const char *file_to)
 	return (0);
 }
 
+
 /**
  * main - Entry point for the cp program
  * @argc: Argument count
@@ -88,6 +89,10 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 
-	return (copy_file_to_file(argv[1], argv[2]));
-}
+	if (copy_file_to_file(argv[1], argv[2]) == -1)
+	{
+		exit(99);
+	}
 
+	return (0);
+}
