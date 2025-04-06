@@ -63,18 +63,12 @@ int copy_file_to_file(const char *file_from, const char *file_to)
 
         }
 
-        /* Handle EOF (bytes_read == 0) */
-        if (bytes_read == 0)
-        {
-                /* Successfully reached EOF, no need to handle further */
-        }
-
-
+        
         if (close(fd_from) == -1)
-        error_exit(100, "Error: Can't close fd %d\n", file_from);
+        error_exit(100, "Error: Can't close fd %d\n", fd_from, file_from);
 
         if (close(fd_to) == -1)
-        error_exit(100, "Error: Can't close fd %d\n", file_to);
+        error_exit(100, "Error: Can't close fd %d\n", fd_to, file_to);
 
         return (1);
 }
