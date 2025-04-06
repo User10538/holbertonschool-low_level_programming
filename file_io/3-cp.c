@@ -68,11 +68,15 @@ int main(int argc, char *argv[])
 	return (0);
 }
 
+/**
+ * check_args - check the args
+ * @argc: int
+ */
 void check_args(int argc)
 {
-    if (argc != 3)
-    {
-        dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
-        exit(97);
-    }
+	if (argc != 3)
+	{
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
 }
