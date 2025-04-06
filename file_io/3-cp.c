@@ -1,4 +1,4 @@
-
+#include <stdarg.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
@@ -8,13 +8,23 @@
 
 #define BUFFER_SIZE 1024  /* Define the buffer size */
 
+/**
+ * error_exit - code for error
+ * @code: int
+ * @message: const char
+ * @arg: const char
+ */
 void error_exit(int code, const char *message, const char *arg)
 {
     dprintf(STDERR_FILENO, message, arg);
     exit(code);
 }
 
-
+/*
+ * copy_file_to_file - file to file
+ * @file_from: source file
+ * @file_to: destination file
+ */
 int copy_file_to_file(const char *file_from, const char *file_to)
 {
         int fd_to, fd_from;
@@ -67,7 +77,7 @@ int copy_file_to_file(const char *file_from, const char *file_to)
         if (close(fd_to) == -1)
         error_exit(100, "Error: Can't close fd FD_VALUE %d\n", file_to);
 
-        return (1);
+        return (0);
 }
 
 int main(int argc, char *argv[])
@@ -77,13 +87,5 @@ int main(int argc, char *argv[])
         dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
         exit(97);
     }
-
-    /* Call the copy function with the arguments passed */
-    if (copy_file_to_file(argv[1], argv[2]) == -1)
-    {
-        /* If copy operation fails, exit with error code */
-        exit(99);
-    }
-
-    return 0;  /* Success */
+    return copy_file_to_file(argv[1], argv[2]);
 }
