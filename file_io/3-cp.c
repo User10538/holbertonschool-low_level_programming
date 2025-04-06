@@ -9,7 +9,7 @@ void check_args(int argc);
 int open_file_from(const char *filename);
 int open_file_to(const char *filename);
 void read_from_file(int file_from, char *buffer);
-void write_to_file(int file_to, char *buffer, int r);
+void write_to_file(int file_to, char *buffer, int r, const char *filename_from, const char *filename_to);
 
 int main(int argc, char *argv[])
 {
@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
     
     while ((r = read(file_from, buffer, BUFFER_SIZE)) > 0)
     {
-        write_to_file(file_to, buffer, r);
+        write_to_file(file_to, buffer, r, argv[1], argv[2]);
     }
     
     if (close(file_from) == -1 || close(file_to) == -1)
@@ -65,13 +65,12 @@ int open_file_to(const char *filename)
     return file;
 }
 
-void write_to_file(int file_to, char *buffer, int r)
+void write_to_file(int file_to, char *buffer, int r, const char *filename_from, const char *filename_to)
 {
     int w = write(file_to, buffer, r);
     if (w == -1)
     {
-        dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-        close(file_from);
+        dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename_to);
         close(file_to);
         exit(99);
     }
