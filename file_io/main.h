@@ -6,7 +6,7 @@
 #include <stdio.h>
 
 int copy_file_to_file(const char *file_from, const char *file_to);
-void error_exit(int code, const char *format, ...); 
+void error_exit(int code, const char *message, const char *arg)
 
 /**
  * append_text_to_file - function that appends text at the end of a file
