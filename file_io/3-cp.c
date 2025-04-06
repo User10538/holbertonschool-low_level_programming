@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
         exit(97);
     }
 
-    // Open file_from for reading
+    /** Open file_from for reading **/
     file_from = open(argv[1], O_RDONLY);
     if (file_from == -1)
     {
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
         exit(98);
     }
 
-    // Read from file_from
+    /** Read from file_from **/
     r = read(file_from, buffer, BUFFER_SIZE);
     if (r == -1)
     {
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
         exit(98);
     }
 
-    // Open file_to for writing, create if needed, truncate if exist
+    /** Open file_to for writing, create if needed, truncate if exist **/
     file_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
     if (file_to == -1)
     {
@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
         exit(99);
     }
 
-    // Copy content from file_from to file_to
+    /** Copy content from file_from to file_to **/
     while (r > 0)
     {
         w = write(file_to, buffer, r);
@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
         }
     }
 
-    // Close file descriptors and handle any errors
+    /** Close file descriptors and handle any errors **/
     if (close(file_from) == -1 || close(file_to) == -1)
     {
         dprintf(STDERR_FILENO, "Error: Can't close fd\n");
