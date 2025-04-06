@@ -60,7 +60,7 @@ int copy_file_to_file(const char *file_from, const char *file_to)
         {
                 close(fd_from);
                 close(fd_to);
-                error_exit(98, "Error: Can't write to %s\n", file_from);
+                error_exit(98, "Error: Can't read from  %s\n", file_from);
 
         }
 	
