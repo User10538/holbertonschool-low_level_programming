@@ -5,7 +5,7 @@
 #include <string.h>
 #include <stdio.h>
 
-void error_exit(int code, const char *message);
+void error_exit(int code, const char *message, const char *arg);
 int copy_file_to_file(const char *file_from, const char *file_to);
 
 /**
